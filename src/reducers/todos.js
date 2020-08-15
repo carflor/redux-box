@@ -8,6 +8,10 @@ export const todos = (state = [], action) => {
       }]
     case 'DELETE_ALL_TODOS':
       return []
+
+    case 'DELETE_TODO':
+      state.splice(action.index, 1)
+      return [...state]
     default:
       return state;
   }

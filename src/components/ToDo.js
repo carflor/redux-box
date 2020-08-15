@@ -1,8 +1,9 @@
 import React from 'react'
 
-const ToDo = ({ id, todo, completed }) => {
+
+const ToDo = ({ id, todo, completed, deleteTodo }) => {
   return (
-    <li>{todo}</li>
+    <li>{todo}<button onClick={deleteTodo}>X</button></li>
   )
 }
 
